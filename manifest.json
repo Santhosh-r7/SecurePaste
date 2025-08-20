@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Paste Guard",
+  "version": "1.0",
+  "description": "Blocks risky content from being pasted into ChatGPT",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://chatgpt.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://chat.openai.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
